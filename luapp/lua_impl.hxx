@@ -25,7 +25,7 @@ namespace lua {
 		}
 
 		template<typename Policy>
-		inline void moveout(Lazy<Policy>& l) noexcept
+		void moveout(Lazy<Policy>& l) noexcept
 		{
 			l.moveout();
 		}
@@ -1140,13 +1140,13 @@ namespace lua {
 
 	template<typename Policy>
 	inline Value::Value(_::Lazy<Policy>&& l):
-		Valref(l.S, (l.pushSingle(), l.S.getTop()))
+		Valref(l.S, (l.pushSingle(), static_cast<int>(l.S.getTop())))
 	{
 	}
 
 
 	inline Value::Value(const Valref& src) noexcept:
-		Valref(src.context, src.context.duplicate(src.index))
+		Valref(src.context, static_cast<int>(src.context.duplicate(src.index)))
 	{
 	}
 

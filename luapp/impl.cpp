@@ -32,7 +32,7 @@ namespace lua {
 //				return lua_error("Attempt to call null pointer as a Lua function");
 			try {
 				Context S(s, Context::initializeExplicitly);
-				return f(S).rvamount;
+				return static_cast<int>(f(S).rvamount);
 			} catch(std::exception& e) {
 				return luaL_error(s, (std::string("Lua function terminated with an exception: ") + e.what()).c_str());
 			} catch(...) {
@@ -49,7 +49,7 @@ namespace lua {
 				return luaL_error(s, "LFunction wrapper: function pointer upvalue at index 1 is invalid");
 			try {
 				Context S(s, Context::initializeExplicitly);
-				return f(S).rvamount;
+				return static_cast<int>(f(S).rvamount);
 			} catch(std::exception& e) {
 				return luaL_error(s, (std::string("Lua function terminated with an exception: ") + e.what()).c_str());
 			} catch(...) {
@@ -63,7 +63,7 @@ namespace lua {
 		LUAPP_HO_INLINE void lazyCallUtils::call(lua_State* L, size_t oldtop, int rvAmount) noexcept
 		{
 			const size_t top = lua_gettop(L);
-			const int argnum = top - oldtop - 1;
+			const int argnum = static_cast<int>(top - oldtop - 1);
 			lua_call(L, argnum, rvAmount);
 		}
 
@@ -73,7 +73,7 @@ namespace lua {
 		LUAPP_HO_INLINE bool lazyPCallUtils::pcall(lua_State* L, size_t oldtop, int rvAmount) noexcept
 		{
 			const size_t top = lua_gettop(L);
-			const int argnum = top - oldtop - 1;
+			const int argnum = static_cast<int>(top - oldtop - 1);
 #if(LUAPP_API_VERSION >= 52)
 			return lua_pcall(L, argnum, rvAmount, 0) == LUA_OK;
 #else
@@ -87,7 +87,7 @@ namespace lua {
 
 		LUAPP_HO_INLINE void lazyClosureUtils::makeClosure(lua_State* L, CFunction fn, size_t uvnum) noexcept
 		{
-			lua_pushcclosure(L, fn, uvnum);
+			lua_pushcclosure(L, fn, static_cast<int>(uvnum));
 		}
 
 
@@ -208,7 +208,7 @@ namespace lua {
 
 		LUAPP_HO_INLINE lua::Valref lua::_::uvIndexer::operator [] (size_t index) noexcept
 		{
-			return lua::Valref(S, lua_upvalueindex(index));
+			return lua::Valref(S, lua_upvalueindex(static_cast<int>(index)));
 		}
 
 
@@ -707,15 +707,15 @@ namespace lua {
 
 	LUAPP_HO_INLINE bool Valref::isUserData(const char* classname) const noexcept
 	{
-		const bool is_userdata = lua_isuserdata(context, index);
+		const bool is_userdata = lua_isuserdata(context, index) != 0;
 		if(is_userdata)
 		{
-			const bool got_mt = lua_getmetatable(context, index);
+			const bool got_mt = lua_getmetatable(context, index) != 0;
 			if(got_mt)
 			{
 				lua_pushstring(context, classname);
 				lua_gettable(context, LUA_REGISTRYINDEX);
-				const bool rv = lua_rawequal(context, -1, -2);
+				const bool rv = lua_rawequal(context, -1, -2) != 0;
 				lua_pop(context, 2);
 				return rv;
 			}
@@ -742,7 +742,7 @@ namespace lua {
 
 	LUAPP_HO_INLINE const char* Valref::readUv(lua_State* s, int closure, size_t index)
 	{
-		return lua_getupvalue(s, closure, index);
+		return lua_getupvalue(s, closure, static_cast<int>(index));
 	}
 
 
@@ -803,7 +803,7 @@ namespace lua {
 
 	LUAPP_HO_INLINE size_t Context::duplicate(size_t index) noexcept
 	{
-		lua_pushvalue(L, index);
+		lua_pushvalue(L, static_cast<int>(index));
 		return getTop();
 	}
 
@@ -871,14 +871,14 @@ namespace lua {
 
 	LUAPP_HO_INLINE void Context::doCall(size_t oldtop, size_t retnum) noexcept
 	{
-		lua_call(L, getTop() - oldtop - 1, retnum);
+		lua_call(L, static_cast<int>(getTop() - oldtop - 1), static_cast<int>(retnum));
 	}
 
 
 
 	LUAPP_HO_INLINE void Context::makeClosure(CFunction f, size_t oldtop) noexcept
 	{
-		lua_pushcclosure(L, f, getTop() - oldtop - 1);
+		lua_pushcclosure(L, f, static_cast<int>(getTop() - oldtop - 1));
 	}
 
 
@@ -923,7 +923,7 @@ namespace lua {
 
 	LUAPP_HO_INLINE void Context::doConcat(size_t oldtop) noexcept
 	{
-		lua_concat(L, getTop() - oldtop);
+		lua_concat(L, static_cast<int>(getTop() - oldtop));
 	}
 
 
@@ -966,7 +966,7 @@ namespace lua {
 #if(LUAPP_API_VERSION >= 52)
 	LUAPP_HO_INLINE bool Context::gcIsRunning() const noexcept
 	{
-		return lua_gc(L, LUA_GCISRUNNING, 0);
+		return lua_gc(L, LUA_GCISRUNNING, 0) != 0;
 	}
 #endif
 
@@ -988,7 +988,7 @@ namespace lua {
 	{
 		if(index > getTop() || index <= args.size())
 			throw std::runtime_error("Lua context: attempt to remove invalid stack index (pseudo, non-existent or argument)");
-		lua_remove(L, index);
+		lua_remove(L, static_cast<int>(index));
 	}
 
 
@@ -1039,7 +1039,7 @@ namespace lua {
 	// Table
 
 	LUAPP_HO_INLINE Table::Table(Context& S, size_t arrSize, size_t recSize) noexcept:
-		Anchor(S, _::TableUtils::makeNew(S, arrSize, recSize)), raw(Anchor)
+		Anchor(S, _::TableUtils::makeNew(S, static_cast<int>(arrSize), static_cast<int>(recSize))), raw(Anchor)
 	{
 	}
 
