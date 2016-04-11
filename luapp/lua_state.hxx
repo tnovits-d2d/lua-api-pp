@@ -27,7 +27,7 @@ namespace lua {
 		State();
 
 		//! @brief Custom allocator constructor.
-		explicit State(void* (__cdecl customAllocatorFunction) (void* ud, void* ptr, size_t oldSize, size_t newSize), void* ud = nullptr);
+		explicit State(void* (customAllocatorFunction) (void* ud, void* ptr, size_t oldSize, size_t newSize), void* ud = nullptr);
 
 		//! @brief Destructor frees the associated Lua state.
 		//! @details All raw pointers to lua_State are invalidated after object destruction.
