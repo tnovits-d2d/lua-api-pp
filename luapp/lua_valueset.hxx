@@ -107,7 +107,7 @@ namespace lua{
 				return rv -= n;
 			}
 
-			ptrdiff_t operator - (const vsCIterator& rhs) const noexcept
+			std::ptrdiff_t operator - (const vsCIterator& rhs) const noexcept
 			{
 				return val.index - rhs.val.index;
 			}
@@ -234,7 +234,7 @@ namespace lua{
 				return rv -= n;
 			}
 
-			ptrdiff_t operator - (const vsIterator& rhs) const noexcept
+			std::ptrdiff_t operator - (const vsIterator& rhs) const noexcept
 			{
 				return vsCIterator::operator - (rhs);
 			}
@@ -330,7 +330,7 @@ namespace lua{
 
 		typedef Valref value_type ;	//!< @brief The Valref objects are not actually stored, but rather created dynamically.
 		typedef size_t size_type;	//!< @brief Index type.
-		typedef ptrdiff_t difference_type;	//!< @brief Index difference.
+		typedef std::ptrdiff_t difference_type;	//!< @brief Index difference.
 #ifdef DOXYGEN_ONLY
 		typedef valset_iterator iterator;		//!< @brief Normal iterator.
 		typedef valset_const_iterator const_iterator;	//!< @brief Const iterator.
