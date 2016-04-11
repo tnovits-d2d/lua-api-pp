@@ -728,6 +728,11 @@ namespace lua {
 			push(static_cast<unsigned long long>(val));
 		}
 
+        void push(unsigned long val) noexcept
+		{
+			push(static_cast<unsigned long long>(val));
+		}
+
 		void push(long long val) noexcept;
 		void push(unsigned long long val) noexcept;
 #endif
