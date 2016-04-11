@@ -220,9 +220,9 @@ BOOST_FIXTURE_TEST_CASE(ReturningReferences, fxContext)
 	BOOST_CHECK_EQUAL(crv2, 2.7);
 	context.global["fn"] = context.wrap(refwrapped);
 	const double rv1 = context.global["fn"](1);
-	BOOST_CHECK_EQUAL(crv1, 3.14);
+	BOOST_CHECK_EQUAL(rv1, 3.14);
 	const double rv2 = context.global["fn"](0);
-	BOOST_CHECK_EQUAL(crv2, 2.7);
+	BOOST_CHECK_EQUAL(rv2, 2.7);
 }
 
 
