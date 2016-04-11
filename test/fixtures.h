@@ -1,7 +1,7 @@
 #ifndef FIXTURES_H_INCLUDED
 #define FIXTURES_H_INCLUDED
 
-#include "luapp/lua.hpp"
+#include "luapp/luapp.hpp"
 #include "luapp/luainc.h"
 
 

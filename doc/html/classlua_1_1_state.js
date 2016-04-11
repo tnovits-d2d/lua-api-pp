@@ -1,7 +1,7 @@
 var classlua_1_1_state =
 [
     [ "State", "classlua_1_1_state.html#a790355057d12e9c1ce7643551c16fecd", null ],
-    [ "State", "classlua_1_1_state.html#ace77423ce2e5aceca40a96c040c8fcbb", null ],
+    [ "State", "classlua_1_1_state.html#ab18413d7548d168ad2d8edf787764640", null ],
     [ "~State", "classlua_1_1_state.html#aaf25afd89446e3f024a22a83052a083f", null ],
     [ "State", "classlua_1_1_state.html#a14e7b568c69d3e9a1978962ec008138c", null ],
     [ "operator=", "classlua_1_1_state.html#a26a0cd160c06f614c13be53b4bc2b309", null ],

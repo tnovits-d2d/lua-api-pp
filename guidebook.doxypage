@@ -7,7 +7,7 @@
 
 /*!
 * @page guidebook Guide book
-* 
+*
 * This book will gently introduce you to Lua API++ library, explain basic ideas and concepts behind it while showing in simple examples how this library is used.
 * If you want to know what this library does, whether you should use it and what you will gain from doing so, this is the reading for you.
 * It is assumed that you're already familiar with the basics of Lua and its API.
@@ -15,7 +15,7 @@
 * @tableofcontents
 *
 * @section guidebook_introduction Introduction
-* So, what is Lua API++? In short, it is something you use @em instead of Lua API to achieve same things much easier. 
+* So, what is Lua API++? In short, it is something you use @em instead of Lua API to achieve same things much easier.
 * Of course, it is not a complete replacement, but rather an intermediate, who "explains" your intent to Lua API.
 * The things you do are efficiently translated into calls to Lua API, nearing or matching the efficiency of using Lua API manually.
 *
@@ -27,7 +27,7 @@
 * For starters, let's make a project that does nothing. It is up to you how you create new project in your IDE (or even whether you use IDE at all)
 * and how you attach Lua to your project. You probably will add Lua header directory as well as Lua API++ directory to additional include paths.
 *
-* Lua API++ is designed to be compiled into your projects rather than linked as a static or dynamic library. 
+* Lua API++ is designed to be compiled into your projects rather than linked as a static or dynamic library.
 * Also it's @em separated from Lua API, which means that including Lua API++ does not include Lua API headers.
 * This will prevent you from accidentally mixing calls to Lua API++ and plain Lua API, which could create some messy situations.
 * Mixing calls @em intentionally is, of course, entirely possible.
@@ -53,7 +53,7 @@
 * @subsubsection guidebook_setting_up_empty_luahpp Minimal program code
 * So, after taking care of impl.cpp, we just write minimal program code for our empty project:
 * @code{.cpp}
-* #include <luapp/lua.hpp>
+* #include <luapp/luapp.hpp>
 *
 * int main()
 * {
@@ -69,7 +69,7 @@
 * @code{.cpp}
 * #include <iostream>
 * using std::cout; using std::endl;
-* #include <luapp/lua.hpp>
+* #include <luapp/luapp.hpp>
 * using lua::State;
 *
 * int main(int argc, const char* argv[])
@@ -77,7 +77,7 @@
 *     cout << "Lua interpreter\n";
 *     if(argc > 1) { // If something was given in the command line...
 *         State s;   // ...create Lua state...
-*         try { 
+*         try {
 *             s.runFile(argv[1]);  // ...and attempt to execute file.
 *         } catch(std::exception& e) {
 *             cout << e.what() << endl;  // Report error.

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['c_5ffunction',['C_Function',['../namespacelua.html#ad9971b6ef33e02ba2c75d19c1d2518a1aff10d9a027bda249f40521bde7d661c9',1,'lua']]],
-  ['call',['call',['../classlua_1_1_valref.html#aff07ac069089ea0c36676998e45895cf',1,'lua::Valref::call()'],['../classlua_1_1_state.html#a24c948f536af9c1ee55a4475f8f52538',1,'lua::State::call()']]],
+  ['call',['call',['../classlua_1_1_valref.html#ac02cc9b079826f988ae2bfedc8ce204d',1,'lua::Valref::call()'],['../classlua_1_1_state.html#a24c948f536af9c1ee55a4475f8f52538',1,'lua::State::call()']]],
   ['cast',['cast',['../classlua_1_1_valref.html#a5c6a91e9b5e988939974679033c337dc',1,'lua::Valref']]],
   ['cfunction',['CFunction',['../namespacelua.html#a83cfad85b3f10b60e47cb19f58c9c902',1,'lua']]],
   ['changelog',['Changelog',['../changelog.html',1,'']]],

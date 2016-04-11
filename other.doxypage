@@ -54,9 +54,9 @@
 * This library is intended to be compiled with your project. All the files you're going to need for the project are in luapp/ directory.
 * Add a source file containing single line @code{.cpp}#include <luapp/impl.cpp> @endcode to your project.
 * In @ref configuring_performance "header-only" mode this step is not required.
-* Just include @ref lua.hpp "luapp/lua.hpp" in your sources and you're ready to go.
+* Just include @ref luapp.hpp "luapp/luapp.hpp" in your sources and you're ready to go.
 *
-* Do not include any *.hxx files: those depend on particular inclusion order in which they are included into @ref lua.hpp.
+* Do not include any *.hxx files: those depend on particular inclusion order in which they are included into @ref luapp.hpp.
 * Besides Lua API itself (configured with @ref luainc.h) and standard C++ library there are no external dependencies.
 *
 * Set the appropriate @ref configuring "configuration macros" if needed.
@@ -111,7 +111,7 @@
 * Functions that interact with Lua API were put into impl.cpp and therefore are not inlined by default.
 * You can change that by using link-time code generation (called LTCG in Visual Studio and LTO in GCC).
 * Alternatively, the @b LUAPP_HEADER_ONLY macro will make every function inline, but unlike normal mode
-* @ref luainc.h "Lua API headers" will be included by @ref lua.hpp as well.
+* @ref luainc.h "Lua API headers" will be included by @ref luapp.hpp as well.
 *
 * The library relies heavily on templates and aggressive inlining, so without optimization there will be some operational overhead.
 * Use best optimization settings available for your project if you need to achieve best performance.

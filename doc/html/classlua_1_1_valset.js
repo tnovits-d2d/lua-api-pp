@@ -2,7 +2,7 @@ var classlua_1_1_valset =
 [
     [ "value_type", "classlua_1_1_valset.html#a110ac4f055f3ef20cc6537e4a7736ac1", null ],
     [ "size_type", "classlua_1_1_valset.html#a49b489a408a211a90e766329c0732d7b", null ],
-    [ "difference_type", "classlua_1_1_valset.html#acf947bbb9e09f863cc3572ff8550b183", null ],
+    [ "difference_type", "classlua_1_1_valset.html#ad319fc54a93a2c7058c70e40428ed2e2", null ],
     [ "iterator", "classlua_1_1_valset.html#a98494500abe29e24091fd05a2f79a3bc", null ],
     [ "const_iterator", "classlua_1_1_valset.html#a95953f069ed477e973b4065f3eafa397", null ],
     [ "reverse_iterator", "classlua_1_1_valset.html#a92b881db836646f4039adcbb73c8595f", null ],
@@ -17,12 +17,12 @@ var classlua_1_1_valset =
     [ "~Valset", "classlua_1_1_valset.html#a5bf340219444e29ef02032fa2ee82d64", null ],
     [ "at", "classlua_1_1_valset.html#a32d5706ca851d814679ea783c05f1bbf", null ],
     [ "at", "classlua_1_1_valset.html#a16b4e07f91abff79c734eee6c627ecf9", null ],
-    [ "operator[]", "classlua_1_1_valset.html#affb098ad09cb36f71cb28c4b937b5e7e", null ],
+    [ "operator[]", "classlua_1_1_valset.html#aca88435a6dc84d8848716c4732f54755", null ],
     [ "operator[]", "classlua_1_1_valset.html#ad9490a1dfe9ab280829a12edea2a858b", null ],
-    [ "size", "classlua_1_1_valset.html#a44545a936daa510da7f9fe4835f6ee84", null ],
-    [ "empty", "classlua_1_1_valset.html#ab863df8ed6316860117a6bf26e131bbd", null ],
+    [ "size", "classlua_1_1_valset.html#a3caedb145a667c26028740417dcf32c3", null ],
+    [ "empty", "classlua_1_1_valset.html#a3f6fc5de06a318920d84f3c3742db07f", null ],
     [ "push_back", "classlua_1_1_valset.html#ae3ded15497fa5d0e5b687828bd9c0294", null ],
     [ "pop_back", "classlua_1_1_valset.html#a1e3058e2bda07f1627cfb6ea99fac0c5", null ],
-    [ "success", "classlua_1_1_valset.html#a6440cff36cf48f872e240bd18ccbbbab", null ],
-    [ "isBlocked", "classlua_1_1_valset.html#aac8b17c5409a502ad490d8384aaf827f", null ]
+    [ "success", "classlua_1_1_valset.html#abfcd8f0576ebbce3d9f932d6fc130dca", null ],
+    [ "isBlocked", "classlua_1_1_valset.html#a90afabcf5c3c7f9163db8acac1caa9d1", null ]
 ];

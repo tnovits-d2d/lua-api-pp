@@ -14,7 +14,7 @@
 #endif // LUAPP_HEADER_ONLY
 
 
-#include "lua.hpp"
+#include "luapp.hpp"
 
 
 #include <algorithm>

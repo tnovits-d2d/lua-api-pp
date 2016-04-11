@@ -17,7 +17,7 @@
 *
 * @code{.cpp}
 * #include <iostream>
-* #include <luapp/lua.hpp>
+* #include <luapp/luapp.hpp>
 * using namespace std;
 * using namespace lua;
 *
@@ -102,7 +102,7 @@
 * @code{.cpp}
 * #include <iostream>
 * #include <vector>
-* #include <luapp/lua.hpp>
+* #include <luapp/luapp.hpp>
 * using namespace lua;
 * using namespace std;
 *

@@ -1,4 +1,4 @@
-#include <luapp/lua.hpp>
+#include <luapp/luapp.hpp>
 #include <luapp/luainc.h>
 #include "fixtures.h"
 #include <fstream>
