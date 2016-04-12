@@ -85,26 +85,26 @@ namespace lua{
 			// RandomAccessIterator
 			vsCIterator& operator += (size_t n) noexcept
 			{
-				val.index += n;
+				val.index += static_cast<int>(n);
 				return *this;
 			}
 
 			vsCIterator operator + (size_t n) const noexcept
 			{
 				auto rv(*this);
-				return rv += n;
+				return rv += static_cast<int>(n);
 			}
 
 			vsCIterator& operator -= (size_t n) noexcept
 			{
-				val.index -= n;
+				val.index -= static_cast<int>(n);
 				return *this;
 			}
 
 			vsCIterator operator - (size_t n) const noexcept
 			{
 				auto rv(*this);
-				return rv -= n;
+				return rv -= static_cast<int>(n);
 			}
 
 			std::ptrdiff_t operator - (const vsCIterator& rhs) const noexcept
@@ -142,7 +142,7 @@ namespace lua{
 			mutable Valref val;
 			// friend functions
 			vsCIterator(Context& s, size_t idx) noexcept:
-				val(s, idx)
+				val(s, static_cast<int>(idx))
 			{
 			}
 		};

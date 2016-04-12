@@ -901,7 +901,7 @@ namespace lua {
 		//! Create a temporary stack value (always on stack top)
 		_::tValue makeTemp() noexcept
 		{
-			return _::tValue(*this, getTop());
+			return _::tValue(*this, static_cast<int>(getTop()));
 		}
 
 		//! Allocate userdata on the top
