@@ -8,7 +8,7 @@
 #ifndef LUA_IMPL_HPP_INCLUDED
 #define LUA_IMPL_HPP_INCLUDED
 
-#include "lua_context.hxx"
+#include "luapp_context.hxx"
 
 //! @cond
 

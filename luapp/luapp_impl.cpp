@@ -12,12 +12,12 @@
 #define LUAPP_HO_INLINE
 #endif // LUAPP_HEADER_ONLY
 
-#include "lua_impl.hxx"
-#include "lua_state.hxx"
-#include "lua_context.hxx"
-#include "lua_valueset.hxx"
+#include "luapp_impl.hxx"
+#include "luapp_state.hxx"
+#include "luapp_context.hxx"
+#include "luapp_valueset.hxx"
 
-#include "luainc.h"
+#include "luapp_luainc.h"
 
 #if defined(LUAPP_HEADER_ONLY_FLAG) || !defined(LUAPP_HEADER_ONLY)
 

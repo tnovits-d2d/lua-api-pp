@@ -8,7 +8,7 @@
 #ifndef LUA_BASETYPES_HPP_INCLUDED
 #define LUA_BASETYPES_HPP_INCLUDED
 
-#include "lua_config.hxx"
+#include "luapp_config.hxx"
 
 #include <memory>
 #include <string>

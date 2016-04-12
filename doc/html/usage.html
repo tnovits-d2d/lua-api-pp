@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('usage.html','');});
 <div class="textblock"><h1><a class="anchor" id="usage_basic"></a>
 Using the library with your project</h1>
 <p>This library is intended to be compiled with your project. All the files you're going to need for the project are in luapp/ directory. Add a source file containing single line</p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;luapp/impl.cpp&gt;</span> </div></div><!-- fragment --><p> to your project. In <a class="el" href="configuring.html#configuring_performance">header-only</a> mode this step is not required. Just include <a class="el" href="luapp_8hpp.html">luapp/luapp.hpp</a> in your sources and you're ready to go.</p>
-<p>Do not include any *.hxx files: those depend on particular inclusion order in which they are included into <a class="el" href="luapp_8hpp.html">luapp.hpp</a>. Besides Lua API itself (configured with <a class="el" href="luainc_8h.html">luainc.h</a>) and standard C++ library there are no external dependencies.</p>
+<p>Do not include any *.hxx files: those depend on particular inclusion order in which they are included into <a class="el" href="luapp_8hpp.html">luapp.hpp</a>. Besides Lua API itself (configured with <a class="el" href="luapp__luainc_8h.html">luapp_luainc.h</a>) and standard C++ library there are no external dependencies.</p>
 <p>Set the appropriate <a class="el" href="configuring.html">configuration macros</a> if needed.</p>
 <h1><a class="anchor" id="usage_tests"></a>
 Building the tests (for library development)</h1>

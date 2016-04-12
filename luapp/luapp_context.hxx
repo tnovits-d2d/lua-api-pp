@@ -8,10 +8,10 @@
 #ifndef LUA_CONTEXT_HXX_INCLUDED
 #define LUA_CONTEXT_HXX_INCLUDED
 
-#include "lua_closure.hxx"
-#include "lua_valueset.hxx"
-#include "lua_call.hxx"
-#include "lua_table.hxx"
+#include "luapp_closure.hxx"
+#include "luapp_valueset.hxx"
+#include "luapp_call.hxx"
+#include "luapp_table.hxx"
 
 #include <algorithm>
 

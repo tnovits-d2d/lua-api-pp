@@ -2,7 +2,7 @@
 #define FIXTURES_H_INCLUDED
 
 #include "luapp/luapp.hpp"
-#include "luapp/luainc.h"
+#include "luapp/luapp_luainc.h"
 
 
 struct fxState{

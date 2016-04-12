@@ -11,20 +11,20 @@
 //! @file
 //! @brief Main include file for Lua API++ library (no other files need to be included).
 
-#include "lua_config.hxx"
-#include "lua_basetypes.hxx"
-#include "lua_state.hxx"
-#include "lua_value.hxx"
-#include "lua_lazy.hxx"
-#include "lua_indexer.hxx"
-#include "lua_call.hxx"
-#include "lua_closure.hxx"
-#include "lua_operations.hxx"
-#include "lua_valueset.hxx"
-#include "lua_table.hxx"
-#include "lua_context.hxx"
-#include "lua_wrap.hxx"
-#include "lua_impl.hxx"
+#include "luapp_config.hxx"
+#include "luapp_basetypes.hxx"
+#include "luapp_state.hxx"
+#include "luapp_value.hxx"
+#include "luapp_lazy.hxx"
+#include "luapp_indexer.hxx"
+#include "luapp_call.hxx"
+#include "luapp_closure.hxx"
+#include "luapp_operations.hxx"
+#include "luapp_valueset.hxx"
+#include "luapp_table.hxx"
+#include "luapp_context.hxx"
+#include "luapp_wrap.hxx"
+#include "luapp_impl.hxx"
 
 
 //! @def LUAPP_USERDATA(type, class_name)
@@ -73,7 +73,7 @@
 
 #ifdef LUAPP_HEADER_ONLY
 #define LUAPP_HEADER_ONLY_FLAG
-#include "impl.cpp"
+#include "luapp_impl.cpp"
 #undef LUAPP_HEADER_ONLY_FLAG
 #endif
 

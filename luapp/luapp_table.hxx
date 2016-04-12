@@ -8,9 +8,9 @@
 #ifndef LUA_TABLE_HPP_INCLUDED
 #define LUA_TABLE_HPP_INCLUDED
 
-#include "lua_value.hxx"
-#include "lua_indexer.hxx"
-#include "lua_operations.hxx"
+#include "luapp_value.hxx"
+#include "luapp_indexer.hxx"
+#include "luapp_operations.hxx"
 
 namespace lua {
 

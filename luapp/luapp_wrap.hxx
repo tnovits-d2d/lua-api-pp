@@ -8,7 +8,7 @@
 #ifndef LUA_WRAP_HPP_INCLUDED
 #define LUA_WRAP_HPP_INCLUDED
 
-#include "lua_context.hxx"
+#include "luapp_context.hxx"
 
 //! @cond
 namespace lua {

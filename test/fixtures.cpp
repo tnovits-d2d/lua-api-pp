@@ -1,5 +1,5 @@
 #include <luapp/luapp.hpp>
-#include <luapp/luainc.h>
+#include <luapp/luapp_luainc.h>
 #include "fixtures.h"
 #include <fstream>
 #include <cstdio>

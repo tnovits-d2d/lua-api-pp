@@ -44,10 +44,10 @@
 *
 * @subsubsection guidebook_setting_up_empty_luainc Luainc.h
 *
-* Inside @c luapp directory you may find a file called @c luainc.h. It contains only include directives for Lua headers and may be used when you need
+* Inside @c luapp directory you may find a file called @c luapp_luainc.h. It contains only include directives for Lua headers and may be used when you need
 * to use Lua API directly to save a couple of lines.
 *
-* The only reason to care about it is if you configured Lua headers to be included in some unusual way. In that case, the contents of @c luainc.h
+* The only reason to care about it is if you configured Lua headers to be included in some unusual way. In that case, the contents of @c luapp_luainc.h
 * should be modified in accordance to that unusual way. Even if you don't use this file, @c impl.cpp does.
 *
 * @subsubsection guidebook_setting_up_empty_luahpp Minimal program code
