@@ -237,11 +237,10 @@ var NAVTREEINDEX0 =
 "globals.html":[15,1,0],
 "globals_defs.html":[15,1,1],
 "hierarchy.html":[14,2],
-"index.html":[],
 "index.html":[0],
+"index.html":[],
 "luainc_8h.html":[15,0,0,0],
 "luapp_8hpp.html":[15,0,0,1],
-"luapp_8hpp.html#a0fb38d48b0f92faa1fb0b9cf2553ebd9":[15,0,0,1,3],
 "luapp_8hpp.html#aa5b908481d9041fe334bfd1674ded658":[15,0,0,1,0],
 "luapp_8hpp.html#ace2dd220e8d4481f58a9e115d9e227bc":[15,0,0,1,2],
 "luapp_8hpp.html#ad25819f0651a9390dee1d23b6c9335fa":[15,0,0,1,1],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "motivational_example.html":[3],
 "namespacelua.html":[14,0,0],
 "namespacemembers.html":[13,0],
-"namespacemembers_enum.html":[13,4]
+"namespacemembers_enum.html":[13,4],
+"namespacemembers_func.html":[13,1]
 };

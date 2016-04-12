@@ -8,7 +8,7 @@
 #ifndef LUA_VALUESET_HPP_INCLUDED
 #define LUA_VALUESET_HPP_INCLUDED
 
-
+#include "lua_lazy.hxx"
 
 namespace lua{
 

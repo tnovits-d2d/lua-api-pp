@@ -8,6 +8,7 @@
 #ifndef LUA_INDEXER_HPP_INCLUDED
 #define LUA_INDEXER_HPP_INCLUDED
 
+#include "lua_lazy.hxx"
 
 namespace lua {
 

@@ -5,93 +5,26 @@
 * (c) 2014 OldFisher
 */
 
-#ifndef LUA_HPP_INCLUDED
-#define LUA_HPP_INCLUDED
-
-#include <stdexcept>
-#include <new>
-#include <iterator>
-#include <type_traits>
-#include <utility>
-#include <functional>
-#include <algorithm>
-#include <string>
-
-
-#ifdef LUAPP_COMPATIBILITY_V51
-#define LUAPP_API_VERSION 51
-#endif
-
-#ifdef LUAPP_COMPATIBILITY_V52
-#define LUAPP_API_VERSION 52
-#endif
-
-#ifdef LUAPP_COMPATIBILITY_V53
-#define LUAPP_API_VERSION 53
-#endif
-
-#ifndef LUAPP_API_VERSION
-#define LUAPP_API_VERSION 53
-#endif
-
-
+#ifndef LUAPP_HPP_INCLUDED
+#define LUAPP_HPP_INCLUDED
 
 //! @file
 //! @brief Main include file for Lua API++ library (no other files need to be included).
 
-#ifdef LUAPP_NONDISCARDABLE_ALL
-#define LUAPP_NONDISCARDABLE_INDEX
-#define LUAPP_NONDISCARDABLE_ARITHMETICS
-#define LUAPP_NONDISCARDABLE_CONCAT
-#endif	// LUAPP_NONDISCARDABLE_ALL
-
-
+#include "lua_config.hxx"
 #include "lua_basetypes.hxx"
+#include "lua_state.hxx"
+#include "lua_value.hxx"
 #include "lua_lazy.hxx"
 #include "lua_indexer.hxx"
 #include "lua_call.hxx"
 #include "lua_closure.hxx"
 #include "lua_operations.hxx"
 #include "lua_valueset.hxx"
-#include "lua_value.hxx"
 #include "lua_table.hxx"
-
-
-//! Every thing in Lua API++ library is contained inside this namespace.
-namespace lua {
-
-	//! Pointer to Lua API++ compatible function.
-	using LFunction = Retval (*)(Context&);
-
-	//! @cond
-	namespace _ {
-		int LFunctionWrapper(LFunction f, lua_State* s) noexcept;
-	}
-	//! @endcond
-
-	//! @brief Wrapper for @ref LFunction that creates a proper Lua-compatible C function.
-	//! @details <code>template\<@ref lua::LFunction "LFunction" F\> mkcf</code>\n
-	//! This template converts @ref lua::LFunction "Lua API++ compatible function" to a proper Lua-compatible C function (mkcf is short for "make C function").
-	//! The wrapper creates @ref lua::Context "Context" object and passes it to wrapped function, then converts returned @ref lua::Retval "Retval" to number of returned values.
-	//! All exceptions that come from wrapped function are intercepted and converted to Lua runtime errors.
-	//! Example: @code{.cpp}
-	//! Retval someFunction(Context& context) {return context.ret();}
-	//! CFunction cf = mkcf<someFunction>;
-	//! @endcode
-	//! Note the lack of round parentheses when using mkcf template.
-	//! @note Unlike @ref Context::closure "closure" function, mkcf creates individual wrapper for each LFunctions. It doesn't reserve first upvalue for internal use.
-	template<LFunction F>
-	int mkcf(lua_State* l)
-	{
-		return _::LFunctionWrapper(F, l);
-	}
-
-}
-
 #include "lua_context.hxx"
 #include "lua_wrap.hxx"
 #include "lua_impl.hxx"
-#include "lua_state.hxx"
 
 
 //! @def LUAPP_USERDATA(type, class_name)
@@ -145,4 +78,4 @@ namespace lua {
 #endif
 
 
-#endif // LUA_HPP_INCLUDED
+#endif // LUAPP_HPP_INCLUDED

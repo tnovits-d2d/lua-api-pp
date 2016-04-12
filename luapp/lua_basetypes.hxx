@@ -8,6 +8,11 @@
 #ifndef LUA_BASETYPES_HPP_INCLUDED
 #define LUA_BASETYPES_HPP_INCLUDED
 
+#include "lua_config.hxx"
+
+#include <memory>
+#include <string>
+
 // Lua++: base lua types and their identification
 
 struct lua_State;
@@ -15,6 +20,7 @@ struct lua_State;
 
 //##############################################################################
 
+//! Every thing in Lua API++ library is contained inside this namespace.
 namespace lua {
 
 

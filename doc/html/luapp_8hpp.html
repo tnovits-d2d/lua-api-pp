@@ -107,9 +107,7 @@ $(document).ready(function(){initNavTree('luapp_8hpp.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a> &#124;
-<a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a>  </div>
   <div class="headertitle">
 <div class="title">luapp.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -118,12 +116,6 @@ $(document).ready(function(){initNavTree('luapp_8hpp.html','');});
 <p>Main include file for Lua API++ library (no other files need to be included).  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
-Namespaces</h2></td></tr>
-<tr class="memitem:namespacelua"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacelua.html">lua</a></td></tr>
-<tr class="memdesc:namespacelua"><td class="mdescLeft">&#160;</td><td class="mdescRight">Every thing in Lua API++ library is contained inside this namespace. <br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:aa5b908481d9041fe334bfd1674ded658"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="luapp_8hpp.html#aa5b908481d9041fe334bfd1674ded658">LUAPP_USERDATA</a>(type,  class_name)&#160;&#160;&#160;namespace lua { template &lt;&gt; struct UserData&lt;type&gt; {typedef void enabled; static constexpr const char* const classname = class_name;}; }</td></tr>
@@ -135,13 +127,6 @@ Macros</h2></td></tr>
 <tr class="memitem:ace2dd220e8d4481f58a9e115d9e227bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="luapp_8hpp.html#ace2dd220e8d4481f58a9e115d9e227bc">LUAPP_RV_CONVERT</a>(rv_type,  body)&#160;&#160;&#160;namespace lua { namespace _ { namespace wrap { template&lt;&gt; inline <a class="el" href="classlua_1_1_retval.html">lua::Retval</a> rvCvt&lt;rv_type&gt;(rv_type val, <a class="el" href="classlua_1_1_context.html">lua::Context</a>&amp; context) body }}}</td></tr>
 <tr class="memdesc:ace2dd220e8d4481f58a9e115d9e227bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return value conversion binder.  <a href="#ace2dd220e8d4481f58a9e115d9e227bc">More...</a><br /></td></tr>
 <tr class="separator:ace2dd220e8d4481f58a9e115d9e227bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a0fb38d48b0f92faa1fb0b9cf2553ebd9"><td class="memTemplParams" colspan="2">template&lt;LFunction F&gt; </td></tr>
-<tr class="memitem:a0fb38d48b0f92faa1fb0b9cf2553ebd9"><td class="memTemplItemLeft" align="right" valign="top">int&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacelua.html#a0fb38d48b0f92faa1fb0b9cf2553ebd9">mkcf</a> (lua_State *l)</td></tr>
-<tr class="memdesc:a0fb38d48b0f92faa1fb0b9cf2553ebd9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wrapper for <a class="el" href="namespacelua.html#a1d08ef8a7b1a72e59f411d9d18d5aacc">LFunction</a> that creates a proper Lua-compatible C function.  <a href="namespacelua.html#a0fb38d48b0f92faa1fb0b9cf2553ebd9">More...</a><br /></td></tr>
-<tr class="separator:a0fb38d48b0f92faa1fb0b9cf2553ebd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main include file for Lua API++ library (no other files need to be included). </p>

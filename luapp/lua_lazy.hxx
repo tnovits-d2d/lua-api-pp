@@ -8,6 +8,7 @@
 #ifndef LUA_LAZY_HPP_INCLUDED
 #define LUA_LAZY_HPP_INCLUDED
 
+#include "lua_basetypes.hxx"
 
 
 namespace lua{

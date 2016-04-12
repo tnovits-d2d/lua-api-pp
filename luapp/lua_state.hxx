@@ -8,7 +8,9 @@
 #ifndef LUA_GSTATE_HPP_INCLUDED
 #define LUA_GSTATE_HPP_INCLUDED
 
+#include "lua_basetypes.hxx"
 
+#include <string>
 
 namespace lua {
 

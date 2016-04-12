@@ -5,7 +5,6 @@
 * (c) 2014 OldFisher
 */
 
-#include "luainc.h"
 
 #ifdef LUAPP_HEADER_ONLY
 #define LUAPP_HO_INLINE inline
@@ -13,11 +12,12 @@
 #define LUAPP_HO_INLINE
 #endif // LUAPP_HEADER_ONLY
 
+#include "lua_impl.hxx"
+#include "lua_state.hxx"
+#include "lua_context.hxx"
+#include "lua_valueset.hxx"
 
-#include "luapp.hpp"
-
-
-#include <algorithm>
+#include "luainc.h"
 
 #if defined(LUAPP_HEADER_ONLY_FLAG) || !defined(LUAPP_HEADER_ONLY)
 

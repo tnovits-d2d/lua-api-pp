@@ -8,10 +8,32 @@
 #ifndef LUA_CONTEXT_HXX_INCLUDED
 #define LUA_CONTEXT_HXX_INCLUDED
 
+#include "lua_closure.hxx"
+#include "lua_valueset.hxx"
+#include "lua_call.hxx"
+#include "lua_table.hxx"
 
-
+#include <algorithm>
 
 namespace lua {
+
+
+    //! @brief Wrapper for @ref LFunction that creates a proper Lua-compatible C function.
+	//! @details <code>template\<@ref lua::LFunction "LFunction" F\> mkcf</code>\n
+	//! This template converts @ref lua::LFunction "Lua API++ compatible function" to a proper Lua-compatible C function (mkcf is short for "make C function").
+	//! The wrapper creates @ref lua::Context "Context" object and passes it to wrapped function, then converts returned @ref lua::Retval "Retval" to number of returned values.
+	//! All exceptions that come from wrapped function are intercepted and converted to Lua runtime errors.
+	//! Example: @code{.cpp}
+	//! Retval someFunction(Context& context) {return context.ret();}
+	//! CFunction cf = mkcf<someFunction>;
+	//! @endcode
+	//! Note the lack of round parentheses when using mkcf template.
+	//! @note Unlike @ref Context::closure "closure" function, mkcf creates individual wrapper for each LFunctions. It doesn't reserve first upvalue for internal use.
+	template<LFunction F>
+	int mkcf(lua_State* l)
+	{
+		return _::LFunctionWrapper(F, l);
+	}  
 
 
 	//! @cond

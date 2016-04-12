@@ -8,7 +8,7 @@
 #ifndef LUA_OPERATIONS_HPP_INCLUDED
 #define LUA_OPERATIONS_HPP_INCLUDED
 
-
+#include "lua_lazy.hxx"
 
 namespace lua{
 //! @cond

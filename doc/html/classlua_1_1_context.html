@@ -190,7 +190,7 @@ template&lt;typename... UpvalueTypes&gt; </td></tr>
 <tr class="separator:adcd9f971fedc47659d88a08f81f4432a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcd9f971fedc47659d88a08f81f4432a"><td class="memTemplParams" colspan="2">template&lt;typename... UpvalueTypes&gt; </td></tr>
 <tr class="memitem:adcd9f971fedc47659d88a08f81f4432a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacelua.html#classlua_1_1_temporary">Temporary</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlua_1_1_context.html#adcd9f971fedc47659d88a08f81f4432a">closure</a> (<a class="el" href="namespacelua.html#a83cfad85b3f10b60e47cb19f58c9c902">CFunction</a> fn, UpvalueTypes &amp;&amp;...upvalues_) noexcept</td></tr>
-<tr class="memdesc:adcd9f971fedc47659d88a08f81f4432a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a closure from <a class="el" href="namespacelua.html#a1d08ef8a7b1a72e59f411d9d18d5aacc">LFunction</a>.  <a href="#adcd9f971fedc47659d88a08f81f4432a">More...</a><br /></td></tr>
+<tr class="memdesc:adcd9f971fedc47659d88a08f81f4432a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a closure from <a class="el" href="namespacelua.html#a8b172d369b96a767aa8c91e02a6211a9">LFunction</a>.  <a href="#adcd9f971fedc47659d88a08f81f4432a">More...</a><br /></td></tr>
 <tr class="separator:adcd9f971fedc47659d88a08f81f4432a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affbac55a8c123d2b7bc7856a0b9004f5"><td class="memTemplParams" colspan="2">template&lt;typename ReturnValueType , typename... ArgTypes&gt; </td></tr>
 <tr class="memitem:affbac55a8c123d2b7bc7856a0b9004f5"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="namespacelua.html#classlua_1_1_temporary">Temporary</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classlua_1_1_context.html#affbac55a8c123d2b7bc7856a0b9004f5">wrap</a> (ReturnValueType(*fn)(ArgTypes...)) noexcept</td></tr>
@@ -277,7 +277,7 @@ Accessor objects and accompanying functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Access point to Lua context. </p>
-<p>This object is passed to <a class="el" href="namespacelua.html#a1d08ef8a7b1a72e59f411d9d18d5aacc">compatible functions</a>. It gives access to function's arguments, global variables and so on. <a class="el" href="classlua_1_1_context.html" title="Access point to Lua context. ">Context</a> is used to access general Lua functions such as garbage collector or memory monitoring, and to return values or report errors. </p>
+<p>This object is passed to <a class="el" href="namespacelua.html#a8b172d369b96a767aa8c91e02a6211a9">compatible functions</a>. It gives access to function's arguments, global variables and so on. <a class="el" href="classlua_1_1_context.html" title="Access point to Lua context. ">Context</a> is used to access general Lua functions such as garbage collector or memory monitoring, and to return values or report errors. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a9222a505f45572196be36703766c45ba"></a>
 <div class="memitem">
@@ -312,7 +312,7 @@ Accessor objects and accompanying functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Explicit construction. </p>
-<p>Sometimes it is necessary to use Lua API++ features outside of <a class="el" href="namespacelua.html#a1d08ef8a7b1a72e59f411d9d18d5aacc">compatible function</a>. You may construct a <a class="el" href="classlua_1_1_context.html" title="Access point to Lua context. ">Context</a> object explicitly using this constructor as follows: </p><div class="fragment"><div class="line"><a class="code" href="classlua_1_1_context.html#a9222a505f45572196be36703766c45ba">Context</a> c(luaStatePtr, Context::initializeExplicitly);</div></div><!-- fragment --> <dl class="section warning"><dt>Warning</dt><dd>This operation is considered unsafe. Be careful with stack manipulations and do not create duplicates of <a class="el" href="classlua_1_1_context.html" title="Access point to Lua context. ">Context</a> object. </dd></dl>
+<p>Sometimes it is necessary to use Lua API++ features outside of <a class="el" href="namespacelua.html#a8b172d369b96a767aa8c91e02a6211a9">compatible function</a>. You may construct a <a class="el" href="classlua_1_1_context.html" title="Access point to Lua context. ">Context</a> object explicitly using this constructor as follows: </p><div class="fragment"><div class="line"><a class="code" href="classlua_1_1_context.html#a9222a505f45572196be36703766c45ba">Context</a> c(luaStatePtr, Context::initializeExplicitly);</div></div><!-- fragment --> <dl class="section warning"><dt>Warning</dt><dd>This operation is considered unsafe. Be careful with stack manipulations and do not create duplicates of <a class="el" href="classlua_1_1_context.html" title="Access point to Lua context. ">Context</a> object. </dd></dl>
 
 </div>
 </div>
@@ -468,7 +468,7 @@ Accessor objects and accompanying functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create a closure from <a class="el" href="namespacelua.html#a1d08ef8a7b1a72e59f411d9d18d5aacc">LFunction</a>. </p>
+<p>Create a closure from <a class="el" href="namespacelua.html#a8b172d369b96a767aa8c91e02a6211a9">LFunction</a>. </p>
 <p>All closures created by this function share common wrapper. </p><dl class="section warning"><dt>Warning</dt><dd>The wrapper is using first upvalue (index 1) internally. Provided upvalues (if any) start at index 2. This holds true for automatically promoted LFunctions too. </dd></dl>
 
 </div>
